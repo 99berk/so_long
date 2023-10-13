@@ -6,7 +6,7 @@
 #    By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/28 14:14:29 by bakgun            #+#    #+#              #
-#    Updated: 2023/10/11 17:49:36 by bakgun           ###   ########.fr        #
+#    Updated: 2023/10/13 12:00:34 by bakgun           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC := gcc
 
 CFLAGS := -Wall -Wextra -Werror -Iheaders/
 
-SOURCE := so_long.c read_map.c check_control.c draw_img.c
+SOURCE := so_long.c read_map.c check_control.c draw_img.c key_handle.c
 GETNEXTLINE := libraries/get_next_line/*c
 LIBFT := libraries/libft/ft_*.c
 FTPRINTF := libraries/ft_printf/*c

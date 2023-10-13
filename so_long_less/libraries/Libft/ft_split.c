@@ -6,11 +6,11 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 13:39:12 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/11 16:32:12 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:19:11 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdlib.h>
+#include <stdlib.h>
 
 static int	ft_wlen(char const *s, char c, int i)
 {

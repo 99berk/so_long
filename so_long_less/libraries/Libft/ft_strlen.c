@@ -6,11 +6,11 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/03 17:00:11 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/11 16:31:32 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:19:31 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <stdlib.h>
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s)
 {

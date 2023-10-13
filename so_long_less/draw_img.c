@@ -6,12 +6,14 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/11 17:21:30 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/11 17:50:20 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:42:39 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include "./minilibx/mlx.h"
 #include "./libraries/ft_printf/ft_printf.h"
+#include <stdlib.h>
 
 static void	draw_wall(t_game *data, int x, int y)
 {
@@ -21,10 +23,10 @@ static void	draw_wall(t_game *data, int x, int y)
 	width = UNIT;
 	height = UNIT;
 	data->wall_img = mlx_xpm_file_to_image(data->mlx_ptr,
-			"./images/bg2.xpm", &width, &height);
+			"./images/wall_img.xpm", &width, &height);
 	if (!data->wall_img)
 	{
-		ft_printf("Error: Could not load wall image.\n");
+		ft_printf("Error\nCould not load wall image.\n");
 		exit(1);
 	}
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win,
@@ -39,10 +41,10 @@ static void	draw_floar(t_game *data, int x, int y)
 	width = UNIT;
 	height = UNIT;
 	data->floor_img = mlx_xpm_file_to_image(data->mlx_ptr,
-			"./images/bg1.xpm", &width, &height);
+			"./images/floar_img.xpm", &width, &height);
 	if (!data->floor_img)
 	{
-		ft_printf("Error: Could not load floor image.\n");
+		ft_printf("Error\nCould not load floor image.\n");
 		exit(1);
 	}
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win,
@@ -57,10 +59,10 @@ static void	draw_exit(t_game *data, int x, int y)
 	width = UNIT;
 	height = UNIT;
 	data->exit_img = mlx_xpm_file_to_image(data->mlx_ptr,
-			"./images/door3.xpm", &width, &height);
+			"./images/exit_img.xpm", &width, &height);
 	if (!data->exit_img)
 	{
-		ft_printf("Error: Could not load exit image.\n");
+		ft_printf("Error\nCould not load exit image.\n");
 		exit(1);
 	}
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win,
@@ -75,10 +77,10 @@ static void	draw_collectible(t_game *data, int x, int y)
 	width = UNIT;
 	height = UNIT;
 	data->collectible_img = mlx_xpm_file_to_image(data->mlx_ptr,
-			"./images/C1.xpm", &width, &height);
+			"./images/collectible_img.xpm", &width, &height);
 	if (!data->collectible_img)
 	{
-		ft_printf("Error: Could not load collectible image.\n");
+		ft_printf("Error\nCould not load collectible image.\n");
 		exit(1);
 	}
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win,
