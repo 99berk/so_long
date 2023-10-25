@@ -4,7 +4,7 @@ CC	=	gcc
 CFLAGS	=	-Wall -Wextra -Werror
 RM	=	rm -f
 
-SRC	=	ft_strlen.c ft_strdup.c ft_split.c ft_strjoin.c\
+SRC	=	ft_strlen.c ft_strdup.c ft_split.c ft_strjoin.c ft_strrchr.c ft_strcmp.c ft_itoa.c\
 
 OBJ	=	$(SRC:.c=.o)
 

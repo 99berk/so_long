@@ -6,11 +6,13 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 11:46:55 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/06 13:58:41 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:18:07 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+#include <unistd.h>
+#include <stdlib.h>
 
 static char	*ft_copy_to_stash(char *stash, char *buf)
 {

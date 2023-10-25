@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 14:22:13 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/06 13:59:09 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/07 11:07:07 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # include <unistd.h>
-# include <stdlib.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 16

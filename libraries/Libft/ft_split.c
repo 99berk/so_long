@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bakgun <bakgun@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/07 13:39:12 by bakgun            #+#    #+#             */
-/*   Updated: 2023/07/08 15:19:15 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/13 15:19:11 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
 
 static int	ft_wlen(char const *s, char c, int i)
 {
