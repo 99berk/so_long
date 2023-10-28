@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:18:26 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/25 17:45:32 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/28 13:11:41 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,7 +111,7 @@ int	main(int ac, char **av)
 		if (!data.map || !check_map_characters(data.map)
 			|| !check_map_rectangular(data.map) || !check_map_borders(data.map)
 			|| !check_player_count(data.map) || !check_exit_count(data.map))
-			exit(1);
+			exit (1);
 		map_width = get_map_width(data.map);
 		map_height = get_map_height(data.map);
 		data.mlx_ptr = mlx_init();

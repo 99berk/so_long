@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 11:41:09 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/25 10:13:26 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/28 12:56:44 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 
 int	exitt(t_game *data)
 {
-	(void)data;
-	system("leaks so_long");
+	mlx_destroy_window(data->mlx_ptr, data->mlx_win);
 	exit (1);
 	return (0);
 }

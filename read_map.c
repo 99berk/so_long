@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 10:51:05 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/25 17:57:04 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/28 12:56:13 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,19 @@ int	get_map_width(char **map)
 
 int	ctrl(char *map_holder)
 {
+	int	len;
+
 	if (!*map_holder)
 	{
 		free(map_holder);
-		ft_printf("Error\nEmpty file.\n");
+		ft_printf("Error\nEmpty file or new line on the top.\n");
+		exit(1);
+	}
+	len = ft_strlen(map_holder);
+	if (map_holder[len - 1] == '\n')
+	{
+		ft_printf("Error\nMap has a new line.\n");
+		free(map_holder);
 		exit(1);
 	}
 	return (0);
@@ -56,7 +65,7 @@ char	**read_map(char *file)
 	while (1)
 	{
 		line = get_next_line(fd);
-		if (!line)
+		if (!line || ft_strcmp(line, "\n") == 0)
 			break ;
 		tmp = map_holder;
 		map_holder = ft_strjoin(tmp, line);

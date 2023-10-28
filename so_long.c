@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/28 14:18:26 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/25 11:37:07 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/28 12:55:32 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	player(t_game *data)
 	if (!data->player_img)
 	{
 		ft_printf("Error\nLoading player image.\n");
-		exit(1);
+		exitt(data);
 	}
 	mlx_put_image_to_window(data->mlx_ptr, data->mlx_win, data->player_img,
 		data->player_x, data->player_y);

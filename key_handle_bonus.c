@@ -6,7 +6,7 @@
 /*   By: bakgun <bakgun@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/13 11:41:09 by bakgun            #+#    #+#             */
-/*   Updated: 2023/10/25 17:46:04 by bakgun           ###   ########.fr       */
+/*   Updated: 2023/10/28 13:11:37 by bakgun           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,9 @@
 #include "./minilibx/mlx.h"
 #include <stdlib.h>
 
-void	destroy_img(t_game *data)
-{
-	mlx_destroy_image(data->mlx_ptr, data->player_img[0]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[1]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[2]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[3]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[4]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[5]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[6]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[7]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[8]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[9]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[10]);
-	mlx_destroy_image(data->mlx_ptr, data->player_img[11]);
-	mlx_destroy_image(data->mlx_ptr, data->collectible_img[0]);
-	mlx_destroy_image(data->mlx_ptr, data->collectible_img[1]);
-	mlx_destroy_image(data->mlx_ptr, data->collectible_img[2]);
-	mlx_destroy_image(data->mlx_ptr, data->collectible_img[3]);
-}
-
 int	exitt(t_game *data)
 {
-	int	i;
-
 	free(data->enemies);
-	destroy_img(data);
-	mlx_destroy_image(data->mlx_ptr, data->floor_img);
-	mlx_destroy_image(data->mlx_ptr, data->wall_img);
-	mlx_destroy_image(data->mlx_ptr, data->exit_img);
-	i = 0;
-	while (data->map[i])
-		free(data->map[i++]);
-	free(data->map);
 	mlx_destroy_window(data->mlx_ptr, data->mlx_win);
 	exit (1);
 	return (0);
