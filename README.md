@@ -38,13 +38,13 @@ Implementing features such as making the player lose when touching an enemy patr
 To compile and run the so_long program, follow these steps:
 
 1. Clone the repository to your local machine:
-  git clone https://github.com/99berk/so_long.git
+  - git clone https://github.com/99berk/so_long.git
 
 2. Navigate to the project directory:
-  cd <project_directory>
+  - cd <project_directory>
 
 3. Compile the source files using the provided Makefile:
-  make
+  - make
 
 4. Run the program with a map description file (ending with .ber extension) as an argument:
-  ./so_long <map_file.ber>
+  - ./so_long <map_file.ber>
